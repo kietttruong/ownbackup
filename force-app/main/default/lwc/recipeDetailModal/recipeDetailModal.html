@@ -1,0 +1,34 @@
+<template>
+    <c-modal modal-title={recipeName}>
+        <span slot="modalBody">
+            <lightning-layout multiple-rows="true" pull-to-boundry="large">
+                <lightning-layout-item size="9" class="slds-p-around_medium">
+                    <lightning-record-view-form record-id={recipeId} object-api-name={RECIPE_OBJECT}>
+                        <div class="slds-theme_default">
+                            <lightning-output-field field-name="Name"></lightning-output-field>
+                            <lightning-output-field field-name="Description__c"></lightning-output-field>
+                        </div>
+                    </lightning-record-view-form>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="3" class="slds-p-around_medium">
+                    <img src={imgsrc} alt={imageAlt} class="tile-image"/>
+                </lightning-layout-item>
+
+            </lightning-layout>
+            
+            <h1> 
+                Likes Section ({likeCount})
+            </h1>
+            <div class="slds-scrollable_y" style="height: 11rem">
+                <lightning-layout multiple-rows="true" pull-to-boundry="large">
+                    <template for:each={likes} for:item="like">
+                        <lightning-layout-item key={like.Id} size="3" class="slds-p-around_medium">
+                            <c-like-tile imgsrc={like.fullphotourl} title={like.name}></c-like-tile>
+                        </lightning-layout-item>
+                    </template>
+                </lightning-layout>
+            </div>
+        </span>
+    </c-modal>
+</template>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is used to capture which user liked or subscribed to a recipe.</description>
+    <externalId>false</externalId>
+    <label>User</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Reactions</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<template>
+    <lightning-card  class="tile">
+        <div onclick={handleTileClick} class="slds-p-horizontal_small">
+            <slot name="tileImage"></slot>
+            <slot name="tileTitle"></slot>
+            <slot name="tileSubTitle"></slot>
+        </div>
+        <slot name="tileButtons"></slot>
+	</lightning-card>
+</template>

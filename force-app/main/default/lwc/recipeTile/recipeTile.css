@@ -1,0 +1,9 @@
+.section {
+    border-bottom-style: solid;
+    border-bottom-color: #4c46a8;
+}
+
+.tile-image {
+    height: 100px;
+    width: 100%;
+}

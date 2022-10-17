@@ -1,0 +1,7 @@
+.tile {
+    display: block;
+    border-radius: .25rem;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}

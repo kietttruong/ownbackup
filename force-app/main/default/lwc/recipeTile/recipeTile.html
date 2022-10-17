@@ -1,0 +1,13 @@
+<template>
+    <c-tile ontileclick={handleRecipeTileClick}>
+        <img src={imgsrc} alt={imageAlt} class="tile-image" slot="tileImage"/>
+        <div class="slds-p-top_medium slds-text-heading_small slds-align_absolute-center section" slot="tileTitle">{title}</div>
+        <div class="slds-p-top_medium slds-text-heading_small slds-align_absolute-center section" slot="tileSubTitle">{subtitle}</div>
+        <div class="slds-align_absolute-center" slot="tileButtons">
+            <lightning-button-icon class="slds-m-around_small" size="large" icon-name="utility:turn_off_notifications"  variant="bare" alternative-text="subscribe" title="subscribe" onclick={handleUnsubClick}></lightning-button-icon>
+            <lightning-button-icon class="slds-m-around_small" size="large" icon-name="utility:alert"  variant="bare" alternative-text="subscribe" title="subscribe" onclick={handleSubClick}></lightning-button-icon>
+            <lightning-button-icon class="slds-m-around_small" size="large" icon-name="utility:like"  variant="bare" alternative-text="like" title="like" onclick={handleLikeClick}></lightning-button-icon>
+            <lightning-button-icon class="slds-m-around_small" size="large" icon-name="utility:dislike"  variant="bare" alternative-text="like" title="like" onclick={handleDislikeClick}></lightning-button-icon>
+        </div>
+    </c-tile>
+</template>

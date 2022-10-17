@@ -1,0 +1,30 @@
+<template>
+    <!--Template to query for list of recipes-->
+    <lightning-layout>
+        <lightning-layout-item size="11" >
+
+        </lightning-layout-item>
+
+        <lightning-layout-item >
+            <c-icon-text-button onclick={handleClickEvent}>
+
+            </c-icon-text-button>
+        </lightning-layout-item>
+    </lightning-layout>
+    <template if:true={recipes}>
+        <div class="slds-scrollable_y" style="height: 70rem">
+            <lightning-layout  multiple-rows="true" pull-to-boundry="large">
+                <template for:each={recipes} for:item="recipe">
+                    <lightning-layout-item key={recipe.Id} size="3" class="slds-p-around_medium">
+                        <c-recipe-tile imgsrc={recipe.photourl} recipeid={recipe.id} title={recipe.name} subtitle={recipe.description} onrecipetileclick={handleRecipeTileClick}></c-recipe-tile>
+                    </lightning-layout-item>
+                </template>
+                
+            </lightning-layout>
+        </div>
+    </template>
+    
+    <c-create-recipe-modal oncreatefinished={handleCreateRecipeFinished}></c-create-recipe-modal>
+    <c-recipe-detail-modal></c-recipe-detail-modal>
+
+</template>

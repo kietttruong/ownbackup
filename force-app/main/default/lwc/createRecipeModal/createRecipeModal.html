@@ -1,0 +1,11 @@
+<template>
+    <c-modal modal-title="Create New Recipe">
+        <span slot="modalBody">
+            <lightning-input name="recipeName" type="text" label="Recipe Name" placeholder="Enter name of the dish" required></lightning-input>
+            <lightning-textarea name="description" placeholder="Enter ingredients and direction to create this dish" label="Recipe Description" required></lightning-textarea>
+            <lightning-file-upload accept={acceptedFormats} onuploadfinished={handleUploadFinished} label="Upload photo of the dish" name="dishImage"></lightning-file-upload>
+            
+        </span>
+        <lightning-button onclick={handleCreateNewRecipe} class="slds-m-left_x-small" variant="brand" label="Create New Recipe" title="create new recipe" slot="modalFooter"></lightning-button>
+    </c-modal>
+   </template>
